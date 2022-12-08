@@ -42,7 +42,7 @@ function generate(user_input) {
   document.querySelector(".qr-code").appendChild(download);
 
   let download_link = document.createElement("a");
-  download_link.setAttribute("download", "`${qrcode._htOption.text}`.png");
+  download_link.setAttribute("download", "${qrcode._htOption.text}.png");
   download_link.innerText = "Изтегли";
 
   download.appendChild(download_link);
