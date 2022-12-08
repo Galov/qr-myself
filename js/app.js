@@ -37,14 +37,14 @@ function generate(user_input) {
     correctLevel: QRCode.CorrectLevel.H,
   });
 
-  console.log(qrcode);
+  console.log(qrcode.htOption.text);
 
   let download = document.createElement("button");
   document.querySelector(".qr-code").appendChild(download);
 
   let download_link = document.createElement("a");
   download_link.setAttribute("download", "qr_code_linq.png");
-  download_link.innerText = "Download";
+  download_link.innerText = "Изтегли";
 
   download.appendChild(download_link);
 
