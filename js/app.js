@@ -17,7 +17,6 @@ let btn = document.querySelector(".button");
 const getData = async () => {
   const response = await fetch("./output.json");
   const data = await response.json();
-  console.log(data);
   document.querySelector(".qr-code").innerHTML = "";
   data.forEach((i) => {
     generate(i.Име);
@@ -37,7 +36,7 @@ function generate(user_input) {
     correctLevel: QRCode.CorrectLevel.H,
   });
 
-  console.log(qrcode.htOption.text);
+  console.log(qrcode._htOption.text);
 
   let download = document.createElement("button");
   document.querySelector(".qr-code").appendChild(download);
